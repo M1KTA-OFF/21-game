@@ -2,7 +2,7 @@ import time
 import random
 import core
 
-cards = [1,2,3,4,5,6,7,8,9,10,11]
+cards = list(range(1,12))
 ucards = []
 bcards = []
 
@@ -15,8 +15,10 @@ bpoints = 0
 end = False
 ready = False
 
+core.greetings()
+
 while end == False:
-    cards = [1,2,3,4,5,6,7,8,9,10,11]
+    cards = list(range(1,12))
     bpass = False
     upass = False
     ready = False
@@ -47,6 +49,8 @@ while end == False:
             if (winner == 2):
                 print("bot!")
                 bpoints+=1
+            if (winner == 0):
+                print("no one.")
             print(utotal,"//",btotal)
             ready = True
             
